@@ -1,0 +1,5 @@
+- hosts: all
+  sudo: yes
+  tasks:
+    - name: display hostname
+      command: hostname

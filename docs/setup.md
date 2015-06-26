@@ -10,16 +10,19 @@
 - 都合上、OSにはCentOS6.5を使用します。
 	- chef/centos-6.5 box
 - 環境構築用のVagrantfile
-	- https://github.com/ki38sato/
+	- https://github.com/ki38sato/ansible-hands-on (当レポジトリ)
 	- git clone もしくは ZIP Downloadして展開
-	- ansible-hands-on ディレクトリ内から vagrant up
+	- ansible-hands-on/handson ディレクトリ内から vagrant up
 	- 動作確認
 		- ssh 192.168.200.10 (user: vagrant, pass: vagrant)
 		- ansible --version => ansible 1.9.1 と表示される
 - 構成
-	- default (Vagrant_handson)
+	- handson/
 		- ansible-handson-srv: 192.168.200.10
 		- ansible-handson-guest1: 192.168.200.20
 		- ansible-handson-guest2: 192.168.200.30
-	- Vagrant_local
+	- localdev/
 		- ansible-local-dev: 192.168.200.40
+
+---
+[< HOME](../Readme.md) || [2. inventory >](inventory.md)

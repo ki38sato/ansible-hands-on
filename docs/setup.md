@@ -1,8 +1,4 @@
-
-# Ansible入門 (プチハンズオン)
-
-
-1. setup / 環境について
+setup
 ---
 - Vagrant + VirtualBox は導入済みの前提です。
 	- 最新バージョンを推奨します。
@@ -25,4 +21,4 @@
 		- ansible-local-dev: 192.168.200.40
 
 ---
-[< HOME](../Readme.md) || [2. inventory >](inventory.md)
+[< INDEX](../Readme.md) || [1. inventory >](1_inventory.md)

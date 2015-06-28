@@ -1,0 +1,2 @@
+- name: install open jdk
+  yum: name=java-{{ jdk_version }}-openjdk

@@ -35,4 +35,4 @@ db
 - inventoryファイル内に記載された全てのホストを含む**all**という予約語がある
 
 ---
-[< 1. setup](1_setup.md) || [3. playbook >](3_playbook.md)
+[< 1. setup](setup.md) || [3. playbook >](3_playbook.md)

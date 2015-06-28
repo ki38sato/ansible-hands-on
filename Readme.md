@@ -15,21 +15,26 @@
 - [8. vars](docs/8_vars.md)
 - [9. template](docs/9_template.md)
 - [10. loop](docs/10_loop.md)
+- [trial-2](docs/trial-2.md)
 - [11. role](docs/11_role.md)
 - [local development environment]()
-- [12. group_vars]()
-- [13. tags]()
-- [14. serial]()
-- [15. when]()
-- [16. register (debbug)]()
-- [17. commandline options]()
-- [18. dynamic inventory]()
-- [19. Magic Variables]()
+
+more...
+- group_vars / host_vars
+- tags
+- serial
+- when
+- register (debbug)
+- commandline options
+- best practice
+- dynamic inventory
+- Magic Variables
 
 
 ---
 reference:
 1. [Ansible Official Document](http://docs.ansible.com/)
+2. 『入門Ansible』
 
 
 (under construction...)

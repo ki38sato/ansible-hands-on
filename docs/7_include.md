@@ -1,4 +1,4 @@
-9. include
+7. include
 ---
 - include 別のファイルを読む
 
@@ -29,10 +29,9 @@ $ cat configure.yml
   copy: src=nginx.conf dest=/etc/nginx/nginx.conf
   notify: restart nginx
 ```
-↑動くか確かめること
 
--
-
+- yamlの構造に気をつける
+  - 上のケースでは、includeされる側にはtasks: は不要
 
 ---
 [< 6. handlers](6_handlers.md) || [8. vars >](8_vars.md)

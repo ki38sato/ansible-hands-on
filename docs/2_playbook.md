@@ -1,4 +1,4 @@
-3. playbook
+2. playbook
 ---
 - playbook 実行する内容を記述する
 
@@ -14,10 +14,10 @@ $ cat site.yml
 
 - 慣習的にsite.ymlとかsite_***.ymlとか付けることが多い
   - [ansible/ansible-examples](https://github.com/ansible/ansible-examples)
-- hosts: => 対象とするグループ名を指定する (もしくはホスト名)
+- hosts: => 対象とするグループ名を指定する
 - option
-  - sudo: yes => setup先でコマンド実行時にrootで実行する
-  - become_user: => root以外で実行したい場合
+  - sudo: yes => コマンド実行時にrootで実行する
+  - sudo_user: => root以外で実行したい場合
   - remote_user: => sshするユーザを指定したい場合
   - gather_facts: no => ホストの情報を取得しない
 - tasks:

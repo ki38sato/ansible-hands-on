@@ -1,4 +1,4 @@
-12. loop
+10. loop
 ---
 - loop 繰り返し処理
 
@@ -31,12 +31,21 @@
 - name: create group
   group: name={{ item.name }} gid={{ item.gid }}
   with_items:
-    - { name: 'dev',  gid: '10000' }
+    - { name: 'devs',  gid: '10000' }
     - { name: 'admin', gid: '20000' }
 ```
 
 
-- include に対してループすることはできない
+- (要注意) include に対してループすることはできない
 
+```
+- include: "{{ item }}.yml"
+  with_items:
+    - config1
+    - config2
+
+$ ansible-playbook site.yml -i hosts
+ERROR: [DEPRECATED]: include + with_items is a removed deprecated feature.  Please update your playbooks.
+```
 ---
-[< 9. template](9_template.md) || [11. role >](11_role.md)
+[< 9. template](9_template.md) || [trial-2 >](trial-2.md)

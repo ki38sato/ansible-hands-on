@@ -1,26 +1,22 @@
-13. role
+11. role
 ---
 - role 機能単位でまとめる
 
-kibana setupレシピでをskeltonで仕込んで。。。
-
-
 ```
-$ cat site_app.yml
+$ cd sample_role
+$ cat site.yml
 
-- hosts: app
+- hosts: kibana4
   sudo: yes
   vars:
-    - jdk_filename: jdk-8u45-linux-x64.rpm
-    - jdk_download_url: http://download.oracle.com/otn-pub/java/jdk/8u45-b14/jdk-8u45-linux-x64.rpm
+    - jdk_version: 1.8.0
+    - es_repo_version: 1.6
+    - es_version: 1.6.0-1
+    - kibana_version: 4.1.0
   roles:
-    - adduser
     - jdk
-    - app
-    - nginx
-    - mackerel_agent
-
-$ tree roles
+    - elasticsearch
+    - kibana
 
 ```
 

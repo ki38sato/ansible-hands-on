@@ -1,29 +1,34 @@
-11. template
+9. template
 ---
 - template リソースファイルの変数化
+  - copy moduleの変数テンプレート版
 
 ```
-- name: copy nginx.conf
-  template:
-    src=nginx.conf.j2
-    dest=/etc/nginx/nginx.conf
-    owner=root
-    group=root
-    mode=0644
+- hosts: all
+  sudo: yes
+  vars:
+    - nginx_listen_port: 8090
+  tasks:
+~中略~
 
-$ cat nginx.conf.js
+    - name: copy nginx.conf
+      template:
+        src=nginx.conf.j2
+        dest=/etc/nginx/nginx.conf
+        owner=root
+        group=root
+        mode=0644
+
+$ cat nginx.conf.j2
 
 ~中略~
 
-listen {{ nginx_listen_port }}
-
+    server {
+        listen       {{ nginx_listen_port }};
+        server_name  localhost;
 ```
-↑変数化の例として余りよくない気がする　ESにする?
-サンプルを全体的にESに寄せるかどうか・・・
-このあと、話変わるのでtrialはさむ？？
 
-- copy moduleの変数導入版
-
+- 変数を使用する以外はcopy moduleと全く一緒
 
 ---
 [< 8. vars](8_vars.md) || [10. loop >](10_loop.md)

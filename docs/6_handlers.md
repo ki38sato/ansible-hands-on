@@ -33,4 +33,4 @@ $ cat site.yml
   - 同じnotifyが複数あっても実行は1回だけ
 
 ---
-[< 5. idempotency](5_idempotency.md) || [7. vars >](7_vars.md)
+[< 5. idempotency](5_idempotency.md) || [7. include >](7_include.md)

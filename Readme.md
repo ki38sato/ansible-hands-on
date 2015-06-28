@@ -3,7 +3,7 @@
 
 ##　INDEX
 
-- [setup](docs/1_setup.md)
+- [setup](docs/setup.md)
 - [1. inventory](docs/1_inventory.md)
 - [2. playbook](docs/2_playbook.md)
 - [3. execution](docs/3_execution.md)
@@ -33,8 +33,9 @@ more...
 
 ---
 reference:
+
 1. [Ansible Official Document](http://docs.ansible.com/)
-2. 『入門Ansible』
+- 『入門Ansible』
 
 
 (under construction...)

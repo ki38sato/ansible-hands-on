@@ -1,0 +1,8 @@
+[web]
+guest1
+
+[db]
+guest2
+
+[kibana4:children]
+web

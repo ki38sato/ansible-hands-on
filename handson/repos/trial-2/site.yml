@@ -1,0 +1,42 @@
+- hosts: db
+  sudo: yes
+  tasks:
+    - name: install open jdk
+      yum: name=java-1.8.0-openjdk
+
+    - name: import rpm key
+      rpm_key: state=present key=http://packages.elasticsearch.org/GPG-KEY-elasticsearch
+
+    - name: copy elasticsearch repository file
+      copy: src=elasticsearch.repo dest=/etc/yum.repos.d/elasticsearch.repo owner=root group=root mode=644
+
+    - name: install elasticsearch
+      yum: name=elasticsearch-1.6.0-1 state=present
+
+    - name: start elasticsearch
+      service: name=elasticsearch state=started enabled=yes
+
+    - name: download kibana4
+      get_url: url="https://download.elastic.co/kibana/kibana/kibana-4.1.0-linux-x64.tar.gz" dest=/var/tmp
+      register: downloaded
+
+    - name: expand kibana4
+      unarchive: src=/var/tmp/kibana-4.1.0-linux-x64.tar.gz dest=/var/tmp/ owner=root group=root copy=no
+      when: downloaded.changed
+
+    - name: stat /var/tmp/kibana
+      stat: path=/var/tmp/kibana
+      register: kibana_stat
+
+    - name: delete /var/tmp/kibana
+      file: path=/var/tmp/kibana state=absent
+      when: kibana_stat.stat.exists and downloaded.changed
+
+    - name: create link to kibana4 dir
+      file: src=/var/tmp/kibana-4.1.0-linux-x64/ dest=/var/tmp/kibana state=link
+
+    - name: copy init file
+      copy: src=kibana_init.sh dest=/etc/init.d/kibana mode=0755
+
+    - name: start kibana
+      service: name=kibana state=started enabled=yes

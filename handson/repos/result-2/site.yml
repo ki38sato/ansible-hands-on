@@ -1,0 +1,9 @@
+- hosts: db
+  sudo: yes
+  vars:
+    - jdk_version: 1.8.0
+    - es_repo_version: 1.6
+  tasks:
+    - include: jdk.yml
+    - include: elasticsearch.yml
+    - include: kibana.yml

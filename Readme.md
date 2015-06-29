@@ -17,16 +17,15 @@
 - [10. loop](docs/10_loop.md)
 - [trial-2](docs/trial-2.md)
 - [11. role](docs/11_role.md)
-- [local development environment]()
+- [12. group_vars / host_vars](12_group_vars.md)
+- [local development environment](local-dev.md)
 
 more...
-- group_vars / host_vars
 - tags
 - serial
 - when
 - register (debbug)
 - commandline options
-- best practice
 - dynamic inventory
 - Magic Variables
 

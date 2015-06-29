@@ -17,7 +17,7 @@
 - [10. loop](docs/10_loop.md)
 - [trial-2](docs/trial-2.md)
 - [11. role](docs/11_role.md)
-- [12. group_vars / host_vars](12_group_vars.md)
+- [12. group_vars / host_vars](docs/12_group_vars.md)
 - [local development environment](local-dev.md)
 
 more...

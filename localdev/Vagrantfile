@@ -12,6 +12,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "#{HOSTNAME1}" do |guest|
     guest.vm.provision "shell", path: "ansible_local.sh"
     guest.vm.network :private_network, ip: IP1
+    guest.vm.network :forwarded_port, guest: 5601, host: 5601
     guest.vm.hostname = "#{HOSTNAME1}"
     guest.vm.provider "virtualbox" do |vb|
       vb.name = "#{HOSTNAME1}"

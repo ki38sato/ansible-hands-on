@@ -11,7 +11,7 @@ IP2 = "192.168.200.20"
 IP3 = "192.168.200.30"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "chef/centos-6.5"
+  config.vm.box = "bento/centos-6.7"
 
   config.vm.define "#{HOSTNAME1}" do |guest|
     guest.vm.provision "shell", path: "ansible.sh"

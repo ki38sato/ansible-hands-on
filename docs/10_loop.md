@@ -3,7 +3,7 @@
 - loop 繰り返し処理
 
 ```
-- name: yum install depenencies
+- name: yum install dependencies
   yum: name={{ item }}
   sudo: yes
   with_items:

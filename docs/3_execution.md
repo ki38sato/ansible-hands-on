@@ -49,7 +49,7 @@ ansible-handson-guest2
 - ansible [group/host] -i [inventory] -m [module] -a [execution content]
     - -m => module指定
     - -a => moduleに渡す実行内容
-- inventoryが既に用意されている状況では非常に協力 (メンテに便利)
+- inventoryが既に用意されている状況では非常に強力 (メンテに便利)
 
 ---
 [< 2. playbook](2_playbook.md) || [4. module >](4_module.md)

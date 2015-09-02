@@ -25,7 +25,7 @@
 ```
 - hosts: all
   sudo: yes
-  vars_file:
+  vars_files:
     - vars.yml
   tasks:
 

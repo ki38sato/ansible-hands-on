@@ -3,7 +3,7 @@
 - inventory 実行対象ホストを定義する
 
 ```
-$ cd /vagrant/repos/skelton1
+$ cd /vagrant/skelton1
 $ cat hosts
 
 [web]

@@ -8,7 +8,7 @@ $ cat site.yml
 - hosts: all
   sudo: yes
   tasks:
-    - name: display hostname
+    - name: execute hostname
       command: hostname
 ```
 
